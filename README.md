@@ -9,4 +9,4 @@ Routes / Features:
 - toggle method of edit/delete
 - Infinite scrolling.
 
-
+- Packages being used: react-router-dom and react-use
