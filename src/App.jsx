@@ -9,9 +9,8 @@ function App() {
   return (
     <Router>
       <div>
-        <h1>Task Manager</h1>
+        <Home />
         <Routes>
-          <Route path="/" element={<Home />} />
           <Route path="/tasks" element={<Tasks />} />
           <Route path="/add-task" element={<AddTask />} />
           <Route path="/edit-task/taskId:" element={<EditTask />} />
