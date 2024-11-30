@@ -4,10 +4,12 @@ import Home from "./components/Home";
 import Tasks from "./components/Tasks";
 import AddTask from "./components/AddTask";
 import EditTask from "./components/EditTasks";
+import TaskProvider from "./contexts/TaskContext";
 
 function App() {
   return (
-    <Router>
+    <TaskProvider>
+      <Router>
       <div>
         <Home />
         <Routes>
@@ -17,6 +19,8 @@ function App() {
         </Routes>
       </div>
     </Router>
+    </TaskProvider>
+    
   )
 }
 
