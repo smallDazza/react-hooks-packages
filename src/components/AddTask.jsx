@@ -37,8 +37,7 @@ const AddTask = () => {
               </div>
               <div>
                   <label>Description: </label>
-                  <input 
-                  type='textarea' 
+                  <textarea  
                   name='description' 
                   value={task.description} 
                   onChange={handleChange} required />

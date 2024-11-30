@@ -15,7 +15,7 @@ function App() {
         <Routes>
           <Route path="/tasks" element={<Tasks />} />
           <Route path="/add-task" element={<AddTask />} />
-          <Route path="/edit-task/taskId:" element={<EditTask />} />
+          <Route path="/edit-task/:id" element={<EditTask />} />
         </Routes>
       </div>
     </Router>

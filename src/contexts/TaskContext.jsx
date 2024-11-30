@@ -1,6 +1,5 @@
 import { createContext, useContext, useState } from "react";
 
-
 const TaskContext = createContext();
 
 export default function TaskProvider(props){
@@ -12,17 +11,23 @@ export default function TaskProvider(props){
     // DeleteTask function
     const deleteTask = (id) => setTasks((prev) => prev.filter((task) => task.id != id))
 
-    //EditTask function
+    // EditTask function
     const editTask = (updatedTask) => {
-        setTasks((prev) => )
-    }
+        setTasks((prev) => 
+            prev.map(
+                (task) => (
+                    task.id === updatedTask.id ?
+                    {...task, ...updatedTask} :
+                    task
+                )))
+    } 
 
-    // taskid === updatedTask.id ?
+    // task.id === updatedTask.id ? 
         // {...task, ...updatedTask} :
         // task
 
     return (
-        <TaskContext.Provider value={{tasks, addTask, deleteTask}}>
+        <TaskContext.Provider value={{tasks, addTask, deleteTask, editTask}}>
             {/* const [tasks, setTasks] = setTaskValue(); */}
             {props.children}
         </TaskContext.Provider>
